@@ -2,6 +2,7 @@ var express = require('express');
 var easymac = require('./src/easy_mac');
 
 var app = express();
+// TODO move secret to environment variable
 app.use(easymac('secure', 600)); // ten minutes
 
 app.get('/', function(req, res){
