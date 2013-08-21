@@ -13,21 +13,24 @@ module.exports = function(secret, expires){
   };
 
   return function(req, res, next){
-    var authHash = req.query.auth_hash;
-    var time = req.query.time;
+    var authHash = req.query && req.query.auth_hash;
+    var time = req.query && req.query.time;
     if (!authHash || !time){
-      res.send(400, "Query parameters 'auth_hash' and 'time' required.");
+      res.writeHead(400);
+      res.end("Query parameters 'auth_hash' and 'time' required.");
     } else {
       var timeInt = parseInt(time, 10);
       if (isValid(authHash, timeInt)){
         if (isExpired(timeInt)){
-          res.send(403, "Sorry, your auth_hash has expired.");
+          res.writeHead(403);
+          res.end("Sorry, your auth_hash has expired.");
         } else {
           // success!
           next();
         }
       } else {
-        res.send(403, "Sorry, your auth_hash is incorrect.");
+        res.writeHead(403);
+        res.end("Sorry, your auth_hash is incorrect.");
       }
     }
   };
