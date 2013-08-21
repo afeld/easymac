@@ -2,7 +2,7 @@
   "name": "easymac",
   "version": "0.0.0",
   "description": "Simple Message Authentication Code middleware for your Connect/Express apps",
-  "main": "app.js",
+  "main": "easymac.js",
   "devDependencies": {
     "mocha": "~1.12.0",
     "connect": "~2.8.5",

@@ -6,7 +6,7 @@ Simple [Message Authentication Code](http://en.wikipedia.org/wiki/Message_authen
 
 ```javascript
 // ...
-var easymac = require('easy-mac');
+var easymac = require('easymac');
 
 // FOR CONNECT
 var app = connect();

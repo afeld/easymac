@@ -1,9 +1,9 @@
 var connect = require('connect');
 var supertest = require('supertest');
 
-var easymac = require('../src/easymac');
+var easymac = require('../easymac');
 
-describe('easy-mac', function(){
+describe('easymac', function(){
   var testApp = function(){
     var app = connect();
     app.use(connect.query());
