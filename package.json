@@ -1,0 +1,16 @@
+{
+  "name": "zipline",
+  "version": "0.0.0",
+  "description": "Create a ZIP on the fly",
+  "main": "app.js",
+  "dependencies": {
+    "archiver": "~0.4.8",
+    "express": "~3.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
